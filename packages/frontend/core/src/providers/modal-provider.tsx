@@ -152,7 +152,6 @@ export function CurrentWorkspaceModals() {
 
   return (
     <>
-      <StarAFFiNEModal />
       <IssueFeedbackModal />
       {currentWorkspace ? <Setting /> : null}
       {currentWorkspace?.flavour === WorkspaceFlavour.LOCAL && (
@@ -160,9 +159,6 @@ export function CurrentWorkspaceModals() {
           <LocalQuotaModal />
           <HistoryTipsModal />
         </>
-      )}
-      {currentWorkspace?.flavour === WorkspaceFlavour.AFFINE_CLOUD && (
-        <CloudQuotaModal />
       )}
       <PeekViewManagerModal />
       {environment.isDesktop && <FindInPageModal />}
@@ -208,9 +204,7 @@ export const SignOutConfirmModal = () => {
     }
   }, [authService, currentWorkspace, openPage, setOpen, workspaces]);
 
-  return (
-    <SignOutModal open={open} onOpenChange={setOpen} onConfirm={onConfirm} />
-  );
+  return;
 };
 
 export const AllWorkspaceModals = (): ReactElement => {
@@ -243,8 +237,6 @@ export const AllWorkspaceModals = (): ReactElement => {
           [jumpToPage, jumpToSubPath, setOpenCreateWorkspaceModal]
         )}
       />
-      <AuthModal />
-      <SignOutConfirmModal />
     </>
   );
 };

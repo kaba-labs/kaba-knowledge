@@ -59,7 +59,7 @@ export const Component = () => {
     buildShowcaseWorkspace(
       workspacesService,
       WorkspaceFlavour.AFFINE_CLOUD,
-      'AFFiNE Cloud'
+      'Kaba Cloud'
     )
       .then(({ meta, defaultDocId }) => {
         if (defaultDocId) {

@@ -33,6 +33,7 @@ export const SidebarHeaderSwitcher = () => {
     [view]
   );
 
+  // KABA TODO
   return (
     <RadioGroup
       borderRadius={8}
