@@ -72,39 +72,6 @@ export const useEnableCloud = () => {
 
   const confirmEnableCloud = useCallback(
     (ws: Workspace, options?: ConfirmEnableCloudOptions) => {
-      const { onSuccess, onFinished } = options ?? {};
-
-      const closeOnSuccess = () => {
-        closeConfirmModal();
-        onSuccess?.();
-      };
-
-      openConfirmModal(
-        {
-          title: t['Enable AFFiNE Cloud'](),
-          description: t['Enable AFFiNE Cloud Description'](),
-          cancelText: t['com.affine.enableAffineCloudModal.button.cancel'](),
-          confirmButtonOptions: {
-            type: 'primary',
-            ['data-testid' as string]: 'confirm-enable-affine-cloud-button',
-            children:
-              loginStatus === 'authenticated'
-                ? t['Enable']()
-                : t['Sign in and Enable'](),
-          },
-          onConfirm: async () =>
-            await signInOrEnableCloud(ws, {
-              ...options,
-              onSuccess: closeOnSuccess,
-            }),
-          onOpenChange: open => {
-            if (!open) onFinished?.();
-          },
-        },
-        {
-          autoClose: false,
-        }
-      );
     },
     [closeConfirmModal, loginStatus, openConfirmModal, signInOrEnableCloud, t]
   );

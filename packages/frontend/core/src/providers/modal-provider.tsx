@@ -164,7 +164,6 @@ export function CurrentWorkspaceModals() {
       {currentWorkspace?.flavour === WorkspaceFlavour.AFFINE_CLOUD && (
         <CloudQuotaModal />
       )}
-      <AiLoginRequiredModal />
       <PeekViewManagerModal />
       {environment.isDesktop && <FindInPageModal />}
       <MoveToTrash.ConfirmModal

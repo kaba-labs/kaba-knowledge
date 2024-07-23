@@ -46,33 +46,17 @@ const UpgradeSuccessLayout = ({
     </div>
   );
 
-  return (
-    <AuthPageContainer title={title} subtitle={subtitle}>
-      <Button type="primary" size="extraLarge" onClick={openAffine}>
-        {t['com.affine.other-page.nav.open-affine']()}
-      </Button>
-    </AuthPageContainer>
-  );
+  return;
 };
 
 export const CloudUpgradeSuccess = () => {
   const t = useI18n();
   useSubscriptionNotifyWriter();
-  return (
-    <UpgradeSuccessLayout
-      title={t['com.affine.payment.upgrade-success-page.title']()}
-      description={t['com.affine.payment.upgrade-success-page.text']()}
-    />
-  );
+  return;
 };
 
 export const AIUpgradeSuccess = () => {
   const t = useI18n();
   useSubscriptionNotifyWriter();
-  return (
-    <UpgradeSuccessLayout
-      title={t['com.affine.payment.ai-upgrade-success-page.title']()}
-      description={t['com.affine.payment.ai-upgrade-success-page.text']()}
-    />
-  );
+  return;
 };

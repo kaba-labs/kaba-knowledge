@@ -20,7 +20,7 @@ export function Nav({ children }: PropsWithChildren<unknown>) {
             className="flex items-center gap-2 text-lg font-semibold md:text-base"
           >
             <Package2 className="h-6 w-6" />
-            <span className="sr-only">AFFiNE</span>
+            <span className="sr-only">Kaba</span>
           </Link>
           <Link
             to="/"

@@ -19,19 +19,5 @@ export const HistoryTipsModal = () => {
     confirmEnableCloud(currentWorkspace);
   }, [confirmEnableCloud, currentWorkspace, setOpen]);
 
-  return (
-    <OverlayModal
-      open={open}
-      topImage={<TopSvg />}
-      title={t['com.affine.history-vision.tips-modal.title']()}
-      onOpenChange={setOpen}
-      description={t['com.affine.history-vision.tips-modal.description']()}
-      cancelText={t['com.affine.history-vision.tips-modal.cancel']()}
-      confirmButtonOptions={{
-        type: 'primary',
-      }}
-      onConfirm={handleConfirm}
-      confirmText={t['com.affine.history-vision.tips-modal.confirm']()}
-    />
-  );
+  return;
 };

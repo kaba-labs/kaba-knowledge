@@ -18,37 +18,34 @@ export const LocalDemoTips = ({
   onLogin,
   onEnableCloud,
 }: LocalDemoTipsProps) => {
-  const t = useI18n();
-  const buttonLabel = isLoggedIn
-    ? t['Enable AFFiNE Cloud']()
-    : t['Sign in and Enable']();
-
-  const handleClick = useCallback(() => {
-    if (isLoggedIn) {
-      return onEnableCloud();
-    }
-    return onLogin();
-  }, [isLoggedIn, onEnableCloud, onLogin]);
-
-  return (
-    <div className={styles.tipsContainer} data-testid="local-demo-tips">
-      <div className={styles.tipsMessage}>
-        {t['com.affine.banner.local-warning']()}
-      </div>
-
-      <div className={styles.tipsRightItem}>
-        <div>
-          <Button onClick={handleClick}>{buttonLabel}</Button>
-        </div>
-        <IconButton
-          onClick={onClose}
-          data-testid="local-demo-tips-close-button"
-        >
-          <CloseIcon />
-        </IconButton>
-      </div>
-    </div>
-  );
+  // const t = useI18n();
+  // const buttonLabel = isLoggedIn
+  // ? t['Enable AFFiNE Cloud']()
+  // : t['Sign in and Enable']();
+  // const handleClick = useCallback(() => {
+  // if (isLoggedIn) {
+  // return onEnableCloud();
+  // }
+  // return onLogin();
+  // }, [isLoggedIn, onEnableCloud, onLogin]);
+  // return (
+  // <div className={styles.tipsContainer} data-testid="local-demo-tips">
+  // <div className={styles.tipsMessage}>
+  // {t['com.affine.banner.local-warning']()}
+  // </div>
+  // <div className={styles.tipsRightItem}>
+  // <div>
+  // <Button onClick={handleClick}>{buttonLabel}</Button>
+  // </div>
+  // <IconButton
+  // onClick={onClose}
+  // data-testid="local-demo-tips-close-button"
+  // >
+  // <CloseIcon />
+  // </IconButton>
+  // </div>
+  // </div>
+  // );
 };
 
 export default LocalDemoTips;

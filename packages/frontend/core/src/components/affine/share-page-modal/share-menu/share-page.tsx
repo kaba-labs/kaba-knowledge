@@ -31,27 +31,7 @@ import type { ShareMenuProps } from './share-menu';
 export const LocalSharePage = (props: ShareMenuProps) => {
   const t = useI18n();
 
-  return (
-    <div className={styles.localSharePage}>
-      <div className={styles.columnContainerStyle} style={{ gap: '12px' }}>
-        <div className={styles.descriptionStyle} style={{ maxWidth: '230px' }}>
-          {t['com.affine.share-menu.EnableCloudDescription']()}
-        </div>
-        <div>
-          <Button
-            onClick={props.onEnableAffineCloud}
-            type="primary"
-            data-testid="share-menu-enable-affine-cloud-button"
-          >
-            {t['Enable AFFiNE Cloud']()}
-          </Button>
-        </div>
-      </div>
-      <div className={styles.cloudSvgContainer}>
-        <CloudSvg />
-      </div>
-    </div>
-  );
+  return ;
 };
 
 export const AffineSharePage = (props: ShareMenuProps) => {
@@ -226,14 +206,6 @@ export const AffineSharePage = (props: ShareMenuProps) => {
 
   return (
     <>
-      <div className={styles.titleContainerStyle}>
-        {t['com.affine.share-menu.publish-to-web']()}
-      </div>
-      <div className={styles.columnContainerStyle}>
-        <div className={styles.descriptionStyle}>
-          {t['com.affine.share-menu.publish-to-web.description']()}
-        </div>
-      </div>
       <div className={styles.rowContainerStyle}>
         <Input
           inputStyle={{
@@ -338,14 +310,7 @@ export const SharePage = (props: ShareMenuProps) => {
   } else if (
     props.workspaceMetadata.flavour === WorkspaceFlavour.AFFINE_CLOUD
   ) {
-    return (
-      // TODO(@eyhn): refactor this part
-      <ErrorBoundary fallback={null}>
-        <Suspense>
-          <AffineSharePage {...props} />
-        </Suspense>
-      </ErrorBoundary>
-    );
+    return;
   }
   throw new Error('Unreachable');
 };

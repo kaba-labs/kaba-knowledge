@@ -60,31 +60,8 @@ export const useGeneralSettingList = (): GeneralSettingList => {
       title: t['com.affine.keyboardShortcuts.title'](),
       icon: KeyboardIcon,
       testId: 'shortcuts-panel-trigger',
-    },
-    {
-      key: 'about',
-      title: t['com.affine.aboutAFFiNE.title'](),
-      icon: InformationIcon,
-      testId: 'about-panel-trigger',
-    },
-  ];
-
-  if (hasPaymentFeature) {
-    settings.splice(3, 0, {
-      key: 'plans',
-      title: t['com.affine.payment.title'](),
-      icon: UpgradeIcon,
-      testId: 'plans-panel-trigger',
-    });
-    if (status === 'authenticated') {
-      settings.splice(3, 0, {
-        key: 'billing',
-        title: t['com.affine.payment.billing-setting.title'](),
-        icon: PaymentIcon,
-        testId: 'billing-panel-trigger',
-      });
     }
-  }
+  ];
 
   if (isEarlyAccess || runtimeConfig.enableExperimentalFeature) {
     settings.push({
@@ -108,12 +85,6 @@ export const GeneralSetting = ({ generalKey }: GeneralSettingProps) => {
       return <Shortcuts />;
     case 'appearance':
       return <AppearanceSettings />;
-    case 'about':
-      return <AboutAffine />;
-    case 'plans':
-      return <AFFiNEPricingPlans />;
-    case 'billing':
-      return <BillingSettings />;
     case 'experimental-features':
       return <ExperimentalFeatures />;
     default:

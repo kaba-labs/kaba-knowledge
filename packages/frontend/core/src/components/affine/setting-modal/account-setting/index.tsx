@@ -251,7 +251,6 @@ export const AccountSetting: FC = () => {
         </Button>
       </SettingRow>
       <StoragePanel />
-      {serverFeatures?.copilot && <AIUsagePanel />}
       <SettingRow
         name={t[`Sign out`]()}
         desc={t['com.affine.setting.sign.out.message']()}

@@ -25,7 +25,6 @@ export const AdminPanelHeader = ({
 
   return (
     <div className={styles.header}>
-      <Logo1Icon className={styles.logo} onClick={handleJumpToIndex} />
       <div className={styles.title}>
         <span>After editing, please click the Save button on the right.</span>
         <ArrowRightBigIcon />

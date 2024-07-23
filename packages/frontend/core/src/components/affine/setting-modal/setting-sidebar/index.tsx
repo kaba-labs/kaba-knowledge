@@ -84,10 +84,6 @@ export const SignInButton = () => {
         setAuthModal({ openModal: true, state: 'signIn' });
       }, [setAuthModal])}
     >
-      <div className="avatar not-sign">
-        <Logo1Icon />
-      </div>
-
       <div className="content">
         <div className="name" title={t['com.affine.settings.sign']()}>
           {t['com.affine.settings.sign']()}
@@ -156,21 +152,6 @@ export const SettingSidebar = ({
               key={key}
               title={title}
               onClick={() => {
-                if (key === 'billing') {
-                  mixpanel.track('BillingViewed', {
-                    // page:
-                    segment: 'settings panel',
-                    module: 'settings menu',
-                    control: 'menu item',
-                  });
-                } else if (key === 'plans') {
-                  mixpanel.track('PlansViewed', {
-                    // page:
-                    segment: 'settings panel',
-                    module: 'settings menu',
-                    control: 'menu item',
-                  });
-                }
                 onTabChange(key, null);
               }}
               data-testid={testId}
@@ -193,18 +174,6 @@ export const SettingSidebar = ({
             activeSubTab={activeTab.split(':')[1] as WorkspaceSubTab}
           />
         </Suspense>
-      </div>
-
-      <div className={style.sidebarFooter}>
-        {loginStatus === 'unauthenticated' ? <SignInButton /> : null}
-        {loginStatus === 'authenticated' ? (
-          <Suspense>
-            <UserInfo
-              onAccountSettingClick={onAccountSettingClick}
-              active={activeTab === 'account'}
-            />
-          </Suspense>
-        ) : null}
       </div>
     </div>
   );

@@ -92,52 +92,5 @@ export const AIUsagePanel = () => {
 
   const color = percent > 80 ? cssVar('errorColor') : cssVar('processingColor');
 
-  return (
-    <SettingRow
-      spreadCol={aiSubscription ? true : false}
-      desc={
-        aiSubscription
-          ? t['com.affine.payment.ai.usage-description-purchased']()
-          : ''
-      }
-      name={t['com.affine.payment.ai.usage-title']()}
-    >
-      {copilotActionLimit === 'unlimited' ? (
-        hasPaymentFeature && aiSubscription?.canceledAt ? (
-          <AIResume />
-        ) : (
-          <Button onClick={openBilling}>
-            {t['com.affine.payment.ai.usage.change-button-label']()}
-          </Button>
-        )
-      ) : (
-        <div className={styles.storageProgressContainer}>
-          <div className={styles.storageProgressWrapper}>
-            <div className="storage-progress-desc">
-              <span>{t['com.affine.payment.ai.usage.used-caption']()}</span>
-              <span>
-                {t['com.affine.payment.ai.usage.used-detail']({
-                  used: copilotActionUsed.toString(),
-                  limit: copilotActionLimit.toString(),
-                })}
-              </span>
-            </div>
-
-            <div className="storage-progress-bar-wrapper">
-              <div
-                className={styles.storageProgressBar}
-                style={{ width: `${percent}%`, backgroundColor: color }}
-              ></div>
-            </div>
-          </div>
-
-          {hasPaymentFeature && (
-            <AISubscribe type="primary" className={styles.storageButton}>
-              {t['com.affine.payment.ai.usage.purchase-button-label']()}
-            </AISubscribe>
-          )}
-        </div>
-      )}
-    </SettingRow>
-  );
+  return;
 };

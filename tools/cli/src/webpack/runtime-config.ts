@@ -1,6 +1,6 @@
 import type { RuntimeConfig } from '@affine/env/global';
 
-import packageJson from '../../package.json' assert { type: 'json' };
+import packageJson from '../../package.json' with { type: 'json' };
 import type { BuildFlags } from '../config';
 
 export function getRuntimeConfig(buildFlags: BuildFlags): RuntimeConfig {

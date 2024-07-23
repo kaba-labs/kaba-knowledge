@@ -64,7 +64,6 @@ export const WorkspaceSettingDetail = ({
         </SettingRow>
       </SettingWrapper>
       <SettingWrapper title={t['com.affine.brand.affineCloud']()}>
-        <EnableCloudPanel />
         <MembersPanel />
       </SettingWrapper>
       {environment.isDesktop && (

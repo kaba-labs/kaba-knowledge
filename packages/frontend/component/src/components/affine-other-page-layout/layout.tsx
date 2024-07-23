@@ -22,10 +22,6 @@ export const AffineOtherPageLayout = ({
     <div className={styles.root}>
       {environment.isDesktop ? null : (
         <div className={styles.topNav}>
-          <a href="/" rel="noreferrer" className={styles.affineLogo}>
-            <Logo1Icon width={24} height={24} />
-          </a>
-
           <DesktopNavbar />
           <Button
             onClick={openDownloadLink}

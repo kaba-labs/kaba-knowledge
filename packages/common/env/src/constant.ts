@@ -16,8 +16,8 @@ export const isBrowser = typeof window !== 'undefined';
 export const isServer = !isBrowser && typeof navigator === 'undefined';
 export const isDesktop = isBrowser && !!window.appInfo?.electron;
 //#endregion
-export const DEFAULT_WORKSPACE_NAME = 'Demo Workspace';
-export const UNTITLED_WORKSPACE_NAME = 'Untitled';
+export const DEFAULT_WORKSPACE_NAME = 'Kaba Workspace';
+export const UNTITLED_WORKSPACE_NAME = 'Kaba Untitled';
 
 export const DEFAULT_SORT_KEY = 'updatedDate';
 export const MessageCode = {

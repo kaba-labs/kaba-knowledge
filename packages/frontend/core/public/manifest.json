@@ -1,9 +1,9 @@
 {
-  "name": "AFFiNE: There can be more than Notion and Miro.",
-  "short_name": "AFFiNE",
-  "description": "AFFiNE is a workspace with fully merged docs, whiteboards and databases. Get more things done, your creativity isn’t monotone.",
+  "name": "Kaba",
+  "short_name": "Kaba",
+  "description": "",
   "start_url": "/?source=pwa",
-  "background_color": "#ffffff",
+  "background_color": "#141414",
   "display": "standalone",
   "scope": "/",
   "icons": [
